@@ -70,7 +70,7 @@ function draw() {
   }
   else if (gameState===PLAY){
     score = score + Math.round(getFrameRate()/60);
-    ground.velocityX = -(6 + 3*score/50);
+    ground.velocityX = -(6 + 3*score/100);
     text("Objective : 1000 ",width-230,100);
     
       if(touches.length>0||keyDown("space") && trex.y>= height-250) {
@@ -144,7 +144,7 @@ function spawnClouds() {
 function spawnObstacles() {
   if(frameCount % 60 === 0) {
     var obstacle = createSprite(width-50,height-110,10,40);
-    obstacle.velocityX = -(6 + 3*score/100);
+    obstacle.velocityX = -(6 + 3*score/130);
     var rand = Math.round(random(1,6));
     switch(rand) {
       case 1: obstacle.addImage(obstacle1);
